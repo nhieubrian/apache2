@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dml-apache
+  labels:
+    k8s-app: test-http
+spec:
+  containers:
+  - name: dml-apache
+    image: gitlab-registry.nrp-nautilus.io/nhieubrian/apache2:latest
