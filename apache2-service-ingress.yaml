@@ -22,7 +22,7 @@ metadata:
   name: test-ingress
 spec:
   rules:
-  - host: dml.nrp-nautilus.io/html
+  - host: apache.nrp-nautilus.io
     http:
       paths:
       - path: /
@@ -34,4 +34,4 @@ spec:
               number: 8080
   tls:
   - hosts:
-    - dml.nrp-nautilus.io/html
+    - apache.nrp-nautilus.io
