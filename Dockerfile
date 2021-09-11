@@ -1,17 +1,13 @@
-FROM ubuntu
+FROM ubuntu:latest
 
-# Update the repository sources list
 RUN apt-get update
+#the following ARG turns off the questions normally asked for location and timezone for Apache
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get install apache2 -y
 
-# Install and run apache
-RUN apt-get install -y apache2 && apt-get clean
+#change working directory to root of apache webhost
+WORKDIR var/www/html
 
-#ENTRYPOINT ["/usr/sbin/apache2", "-k", "start"]
-
-
-#ENV APACHE_RUN_USER www-data
-#ENV APACHE_RUN_GROUP www-data
-#ENV APACHE_LOG_DIR /var/log/apache2
-
+#now start the server
 EXPOSE 80
-CMD apachectl -D FOREGROUND
+CMD ["apachectl", "-D", "FOREGROUND"]
