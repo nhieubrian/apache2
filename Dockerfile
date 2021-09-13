@@ -8,7 +8,7 @@ RUN apt-get install apache2 -y
 #change working directory to root of apache webhost
 WORKDIR var/www/html
 
-COPY test.html index.html
+COPY test.html test.html
 
 #now start the server
 EXPOSE 80
