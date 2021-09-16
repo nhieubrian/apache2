@@ -14,6 +14,8 @@ COPY Collart_Potree.zip Collart_Potree.zip
 
 RUN unzip Collart_Potree.zip
 
+RUN rm index.html
+
 #now start the server
 EXPOSE 80
 CMD ["apachectl", "-D", "FOREGROUND"]
