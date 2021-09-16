@@ -9,7 +9,11 @@ RUN apt-get install apache2 -y
 WORKDIR var/www/html
 
 #adding an example html to see if I am adding correctly to the working dir
-COPY test.html test.html
+COPY Potree.tar.gz .
+
+RUN tar -xf Potree.tar.gz  && rm Potree.tar.gz
+
+
 
 #now start the server
 EXPOSE 80
