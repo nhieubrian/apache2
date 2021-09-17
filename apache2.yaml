@@ -8,11 +8,11 @@ spec:
   containers:
   - name: dml-apache
     image: gitlab-registry.nrp-nautilus.io/nhieubrian/apache2:latest
-  volumeMounts:
-    - mountPath: /var/www/html
-    - name: dml-sw-vol
-  volumes:
-    - name: dml-sw-vol
-      persistentVolumeClaim:
-        claimName: dml-sw-vol
+    volumeMounts:
+      - mountPath: /var/www/html
+      - name: dml-sw-vol
+    volumes:
+      - name: dml-sw-vol
+        persistentVolumeClaim:
+          claimName: dml-sw-vol
 
