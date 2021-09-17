@@ -8,7 +8,7 @@ Note: This current apache2 build is attaching a storage volume (SeaweedFS) to ha
 
 *In order to revert this:*
 
-![SeaweedFS](/images/)
+![SeaweedFS](/images/82df11f7ff3a48c79e3c573c49f333c7.png)
   
  - Simply remove these lines from the apache2.yml file and skip the next section!
  
