@@ -10,7 +10,7 @@ spec:
     image: gitlab-registry.nrp-nautilus.io/nhieubrian/apache2:latest
     volumeMounts:
       - mountPath: /var/www/html
-      - name: dml-sw-vol
+        name: dml-sw-vol
     volumes:
       - name: dml-sw-vol
         persistentVolumeClaim:
