@@ -14,7 +14,7 @@ Note: This current apache2 build is attaching a storage volume (SeaweedFS) to ha
  
  *In order to keep the volume:*
  
- - You'll need to create your own SeaweedFS volume! [Here's my .yaml file!](https://gitlab.nrp-nautilus.io/nhieubrian/novnc-digital-media-lab/-/blob/master/dml-seaweed.yaml). This is how it's built on the Nautilus PRP website.
+ - You'll need to create your own SeaweedFS volume! [Here's my .yaml file!](https://gitlab.nrp-nautilus.io/nhieubrian/novnc-digital-media-lab/-/blob/master/dml-seaweed.yaml) This is how it's built on the Nautilus PRP website.
  - The beauty of this method is that all of your files will be displayed at the main site of the webserver! For me, this allows me to use a Virtual Machine to access the Seaweed drives.
  
  ```
@@ -22,6 +22,6 @@ Note: This current apache2 build is attaching a storage volume (SeaweedFS) to ha
  kubectl create -f [raw of apache2.yml]
  ```
  
- [Link to webserver!](https://apache.nrp-nautilus.io/). <- This url is written in the ingress!
+ [Link to webserver!](https://apache.nrp-nautilus.io/) <- This url is written in the ingress!
  
  
